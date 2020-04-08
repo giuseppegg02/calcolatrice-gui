@@ -4,61 +4,77 @@ import java.awt.*;
 
  public class MyFrame extends JFrame
       {
+          JButton zero =               new JButton("0");
+                 private JButton uno;
+                JButton due ;
+                JButton tre;
+                JButton quattro ;
+                JButton cinque;
+                JButton sei;
+                JButton sette;
+                JButton otto;
+                JButton nove ;
+                JButton piu ;//13
+                JButton meno;//11
+                JButton per;//12
+                JButton diviso;//14
+                JButton uguale ;//777
+                JLabel txt;
+                
                  public static void main(String args[]) 
             {
                 
+                JPanel contentPane = new JPanel(null);
+		contentPane.setPreferredSize(new Dimension(532,325));
+		contentPane.setBackground(new Color(192,192,192));
+		
                 JFrame frame = new JFrame("CALCOLATRICE");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setSize(400, 400);
                 frame.setResizable(true);
              
                
-                 
-                 
-                JButton zero =               new JButton("0");
-                JButton uno =                new JButton("1");
-                JButton due =                new JButton("2");
-                JButton tre =                new JButton("3");
-                JButton quattro =            new JButton("4");
-                JButton cinque =             new JButton("5");
-                JButton sei =                new JButton("6");
-                JButton sette =              new JButton("7");
-                JButton otto =               new JButton("8");
-                JButton nove =               new JButton("9");
-                JButton piu =                new JButton("+");//13
-                JButton meno =               new JButton("-");//11
-                JButton per =                new JButton("x");//12
-                JButton diviso =             new JButton(":");//14
-                JButton uguale =             new JButton("=");//777
-                JLabel txt =                new JLabel();
-                
                 Ascoltatore segno = new Ascoltatore();
                 Ascoltatore operazione = new Ascoltatore();
                
-               
+                
                
                   
                    
                    
                  //implementazione dei numeri  
                 JPanel panel = new JPanel();
-                panel.add(sette);sette.addActionListener(segno);
-                panel.add(otto);otto.addActionListener(segno);
-                panel.add(nove);due.addActionListener(segno);
-                panel.add(quattro);quattro.addActionListener(segno);
-                panel.add(cinque);cinque.addActionListener(segno);
-                panel.add(sei);sei.addActionListener(segno);
-                panel.add(uno);uno.addActionListener(segno);
-                panel.add(due);due.addActionListener(segno);
-                panel.add(tre);tre.addActionListener(segno);
-                panel.add(zero);zero.addActionListener(segno);
+                sette= new JButton();
+                panel.add(sette);sette.addActionListener(segno);sette.setBounds(390,100,90,35);
+
+                panel.add(otto);otto.addActionListener(segno);otto.setBounds(390,280,90,35);
+                
+                panel.add(nove);due.addActionListener(segno);due.setBounds(150,220,90,35);
+                
+                panel.add(quattro);quattro.addActionListener(segno);quattro.setBounds(40,160,90,35);
+                
+                panel.add(cinque);cinque.addActionListener(segno);cinque.setBounds(150,160,90,35);
+                
+                panel.add(sei);sei.addActionListener(segno);sei.setBounds(260,160,90,35);
+                
+                panel.add(uno);uno.addActionListener(segno);uno.setBounds(40,220,90,35);
+                
+                panel.add(due);due.addActionListener(segno);due.setBounds(150,220,90,35);
+                
+                panel.add(tre);tre.addActionListener(segno);tre.setBounds(260,220,90,35);
+               
+                panel.add(zero);zero.addActionListener(segno);zero.setBounds(150,280,90,35);
+                
+                
+                
                 
                 //implementazione dei segni  
                 JPanel esegui = new JPanel();
-                esegui.add(piu);piu.addActionListener(operazione);
-                esegui.add(meno);meno.addActionListener(operazione);
-                esegui.add(diviso);diviso.addActionListener(operazione);
-                esegui.add(uguale);uguale.addActionListener(operazione);
+                esegui.add(piu);piu.addActionListener(operazione);piu.setBounds(390,280,90,35);
+                esegui.add(meno);meno.addActionListener(operazione);meno.setBounds(390,220,90,35);
+                esegui.add(diviso);diviso.addActionListener(operazione);diviso.setBounds(390,100,90,35);
+                esegui.add(uguale);uguale.addActionListener(operazione);uguale.setBounds(390,40,90,35);
+                esegui.add(per);per.addActionListener(operazione);per.setBounds(390,160,90,35);
                 //esegui.setSize(400, 400);
                 
                 
